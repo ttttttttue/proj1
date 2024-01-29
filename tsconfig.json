@@ -1,24 +1,30 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "esnext",
-    "target": "es5",
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "paths": {
-      "*": ["./src/*"],
-    },
-    "types": [],
-  },
-  "strictNullChecks": true,
-  "ts-node": {
     "compilerOptions": {
-      "module": "commonjs",
+        "lib": ["es2015", "dom", "es2015.promise"],
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "esnext",
+        "target": "es5",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": ["./src/*"],
+        },
+        "types": [],
     },
-  },
+    "include": ["src/**/*", "**/*.ts", "**/*.tsx"],
+    "strictNullChecks": true,
+    "ts-node": {
+        "compilerOptions": {
+            "module": "commonjs",
+        },
+    },
+
+    "jsonCompilerOptions": {
+        "strictNullChecks": true,
+    },
 }

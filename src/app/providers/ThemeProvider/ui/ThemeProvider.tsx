@@ -15,12 +15,13 @@ export const ThemeProvider: FC<PropsWithChildren> = ({
 }) => {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
-  const defaultProps = useMemo(() => {
-    return {
-      theme: theme,
-      setTheme: setTheme,
-    };
-  }, [theme, setTheme]);
+  const defaultProps = useMemo(
+    () => ({
+      theme,
+      setTheme,
+    }),
+    [theme, setTheme],
+  );
 
   return (
     <ThemeContext.Provider value={defaultProps}>
