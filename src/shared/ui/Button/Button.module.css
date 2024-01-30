@@ -1,0 +1,15 @@
+.Button {
+  cursor: pointer;
+}
+.clear {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+svg {
+  width: 50px;
+  height: 50px;
+  fill: #002a18;
+}

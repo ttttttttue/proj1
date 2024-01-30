@@ -1,0 +1,17 @@
+@import 'variables/global.css';
+@import 'reset.css';
+@import 'theme/dark.css';
+@import 'theme/light.css';
+
+.app {
+  font: var(--font-m);
+
+  background: var(--bg-color);
+  color: var(--primary-color);
+
+  min-height: 100dvh;
+}
+.page-wrapper {
+  flex-grow: 1;
+  padding: 20px;
+}
