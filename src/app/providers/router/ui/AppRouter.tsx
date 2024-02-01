@@ -8,28 +8,28 @@ import '../../../styles/index.css';
 
 export const router: ReturnType<typeof createBrowserRouter> =
     createBrowserRouter([
-        {
+      {
+        path: AppRoutes.MAIN,
+        element: <Layout />,
+        children: [
+          {
             path: AppRoutes.MAIN,
-            element: <Layout />,
-            children: [
-                {
-                    path: AppRoutes.MAIN,
-                    element: <MainPage />,
-                },
-                {
-                    path: AppRoutes.ABOUT,
-                    element: <AboutPage />,
-                },
-            ],
-        },
+            element: <MainPage />,
+          },
+          {
+            path: AppRoutes.ABOUT,
+            element: <AboutPage />,
+          },
+        ],
+      },
     ]);
 
 export const AppRouter = () => {
-    return (
-        <Suspense fallback={'loading ...'}>
-            <div className="page-wrapper">
-                <Outlet />
-            </div>
-        </Suspense>
-    );
+  return (
+    <Suspense fallback={'loading ...'}>
+      <div className="page-wrapper">
+        <Outlet />
+      </div>
+    </Suspense>
+  );
 };
