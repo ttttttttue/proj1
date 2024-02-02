@@ -4,13 +4,13 @@ import { useTranslation } from 'react-i18next';
 import cls from './LangSwitcher.module.css';
 
 interface LangSwitcherProps {
-    className?: string;
+  className?: string;
 }
 
 export const LangSwitcher = ({ className }: LangSwitcherProps) => {
   const { t, i18n } = useTranslation();
   const toggle = async () => {
-    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
+    await i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
   };
 
   return (
