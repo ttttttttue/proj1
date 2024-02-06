@@ -1,9 +1,9 @@
 import React, { lazy } from 'react';
 
 export const AboutPageAsync: React.LazyExoticComponent<
-    () => React.ReactElement
-> = lazy(
-  () => new Promise((resolve) => {
-    setTimeout(() => resolve(import('./AboutPage')), 1000);
-  }),
-);
+  () => React.ReactElement
+> = lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import('./AboutPage')), 3000);
+  });
+});
