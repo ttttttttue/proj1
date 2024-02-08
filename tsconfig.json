@@ -16,7 +16,7 @@
     },
     "types": ["jest"],
   },
-  "include": ["src/**/*", "**/*.ts", "**/*.tsx"],
+  "include": ["src/**/*", "**/*.ts", "**/*.tsx",".config/jest/setupTest.ts"],
   "strictNullChecks": true,
   "ts-node": {
     "compilerOptions": {
@@ -26,4 +26,5 @@
   "jsonCompilerOptions": {
     "strictNullChecks": true,
   },
+
 }
