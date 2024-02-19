@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["es2015", "dom", "es2015.promise"],
+    "lib": ["dom", "es2015.promise", "es2017"],
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "esnext",
@@ -16,15 +16,15 @@
     },
     "types": ["jest"],
   },
-  "include": ["src/**/*", "**/*.ts", "**/*.tsx",".config/jest/setupTest.ts"],
+  "include": ["src/**/*", "**/*.ts", "**/*.tsx", "./config/jest/setupTest.ts"],
   "strictNullChecks": true,
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs",
     },
   },
+  "skipLibCheck": "true",
   "jsonCompilerOptions": {
     "strictNullChecks": true,
   },
-
 }

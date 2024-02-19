@@ -7,6 +7,7 @@ interface BugButton {
 }
 
 // Для тестирования
+// eslint-disable-next-line no-redeclare
 export const BugButton = () => {
   const [error, setError] = useState(false);
   const { t } = useTranslation();

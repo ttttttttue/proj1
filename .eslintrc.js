@@ -35,7 +35,13 @@ module.exports = {
     'react/jsx-curly-brace-presence': 'off',
     'object-curly-newline': 'off',
     'operator-linebreak': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['data-testid', 'to'],
+      },
+    ],
     'max-len': [
       'error',
       {
@@ -45,6 +51,14 @@ module.exports = {
     ],
     'react/jsx-wrap-multilines': 'off',
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
   globals: {
     __IS_DEV__: true,
   },

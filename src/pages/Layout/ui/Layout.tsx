@@ -8,7 +8,6 @@ import cls from './Layout.module.css';
 export const Layout = () => {
   const { theme } = useTheme();
 
-
   return (
     <div className={classNames(cls.layout, {}, [theme])}>
       <header className={cls.header}>
