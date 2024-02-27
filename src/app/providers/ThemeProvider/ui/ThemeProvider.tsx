@@ -1,4 +1,10 @@
-import { FC, PropsWithChildren, ReactNode, useMemo, useState } from 'react';
+import React, {
+  FC,
+  PropsWithChildren,
+  ReactNode,
+  useMemo,
+  useState,
+} from 'react';
 import {
   LOCAL_STORAGE_THEME_KEY,
   Theme,

@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
-import { Theme } from '../../src/app/providers/ThemeProvider';
-import '../../src/app/styles/index.css';
+import { Theme } from 'app/providers/ThemeProvider';
+import 'app/styles/index.css';
 
 const preview: Preview = {
   parameters: {
@@ -13,6 +13,7 @@ const preview: Preview = {
       },
     },
   },
+
   decorators: [
     (Story) => {
       return (

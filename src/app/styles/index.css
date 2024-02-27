@@ -5,9 +5,13 @@
 
 .app {
   font: var(--font-m);
+  min-height: 100dvh;
   background: var(--bg-color);
   color: var(--primary-color);
-  min-height: 100dvh;
+}
+
+.main {
+  display: flex;
 }
 
 .page-wrapper {

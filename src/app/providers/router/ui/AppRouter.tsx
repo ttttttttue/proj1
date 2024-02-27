@@ -1,12 +1,10 @@
-import { Suspense } from 'react';
-import { createBrowserRouter, Outlet } from 'react-router-dom';
-import { ErrorBoundary } from 'app/providers/ErrorBoundary';
-import { NotFoundPage } from 'pages/NotFoundPage/ui/NotFoundPage';
-import { Layout } from 'pages/Layout';
+import { createBrowserRouter } from 'react-router-dom';
+import { ErrorBoundary } from 'app/providers/ErrorBoundery';
+import { NotFoundPage } from 'pages/NotFoundPage';
 import { MainPage } from 'pages/MainPage';
 import { AboutPage } from 'pages/AboutPage';
-import { PageLoader } from 'widgets/PageLoader';
 import { AppRoutes } from 'shared/config/routeConfig/routeConfig';
+import { App } from 'app/App';
 
 import '../../../styles/index.css';
 
@@ -16,7 +14,7 @@ export const router: ReturnType<typeof createBrowserRouter> =
       path: AppRoutes.MAIN,
       element: (
         <ErrorBoundary>
-          <Layout />
+          <App />
         </ErrorBoundary>
       ),
       children: [
@@ -35,13 +33,3 @@ export const router: ReturnType<typeof createBrowserRouter> =
       ],
     },
   ]);
-
-export const AppRouter = () => {
-  return (
-    <Suspense fallback={<PageLoader />}>
-      <div className="page-wrapper">
-        <Outlet />
-      </div>
-    </Suspense>
-  );
-};

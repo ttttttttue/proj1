@@ -5,8 +5,8 @@ export enum AppRoutes {
 }
 
 // export const routeConfig: Record<AppRoutes, RouteProps> = {
-//   [AppRoutes.MAIN]: {
-//     path: AppRoutes.MAIN,
+//   [AppRoutes.HOME]: {
+//     path: AppRoutes.HOME,
 //     element: <Layout />,
 //   },
 //   [AppRoutes.MAIN]: {
@@ -16,9 +16,5 @@ export enum AppRoutes {
 //   [AppRoutes.ABOUT]: {
 //     path: AppRoutes.ABOUT,
 //     element: <AboutPage />,
-//   },
-//   [AppRoutes.NOT_FOUND]: {
-//     path: AppRoutes.NOT_FOUND,
-//     element: <NotFoundPage />,
 //   },
 // };
