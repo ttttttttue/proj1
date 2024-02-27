@@ -1,4 +1,4 @@
-name: linting, unit testing and screenshot testing
+name: Linting and Testing
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
@@ -27,5 +27,7 @@ jobs:
         run: npm run stylelint:css
       - name: unit testing
         run: npm run test:unit
+      - name: build storybook
+        run: npm run storybook:build
       - name: screenshot testing
         run: npm run test:ui:ci
