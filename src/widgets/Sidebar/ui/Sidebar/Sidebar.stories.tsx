@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Sidebar } from './Sidebar';
@@ -13,9 +14,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
   decorators: [
-    (Story) => (
+    (story) => (
       <div className={`app ${Theme.LIGHT}`}>
-        <Story />
+        <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
       </div>
     ),
   ],
@@ -23,9 +24,9 @@ export const Light: Story = {
 
 export const Dark: Story = {
   decorators: [
-    (Story) => (
+    (story) => (
       <div className={`app ${Theme.DARK}`}>
-        <Story />
+        <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
       </div>
     ),
   ],

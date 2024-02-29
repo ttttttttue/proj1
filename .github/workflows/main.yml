@@ -1,4 +1,4 @@
-name: Linting and Testing
+name: linting
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
@@ -21,13 +21,19 @@ jobs:
         run: npm install
       - name: build production project
         run: npm run build:prod
+        if: always()
       - name: linting typescript
         run: npm run lint
+        if: always()
       - name: linting css
         run: npm run stylelint:css
+        if: always()
       - name: unit testing
         run: npm run test:unit
+        if: always()
       - name: build storybook
         run: npm run storybook:build
+        if: always()
       - name: screenshot testing
         run: npm run test:ui:ci
+        if: always()
