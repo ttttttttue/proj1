@@ -1,5 +1,5 @@
 import React from 'react';
-import { Theme, useTheme } from 'app/providers/ThemeProvider';
+import { Theme, useTheme } from 'app/providers/ThemeProvider/index';
 import Day from 'shared/assets/icons/day.svg';
 import Night from 'shared/assets/icons/night.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
